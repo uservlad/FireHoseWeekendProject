@@ -1,0 +1,31 @@
+<div class="custom-pic-header">
+
+<div class="span7 offset3">
+
+<h2> Here is where all the pictures go </h2>
+
+</div>
+
+<% @pics.each do |pic| %>
+<div class="span3">
+	<div class="boxy">
+		<h2>Hour: <%= pic.hour %></h2>
+		<p />
+		<h4>Emotion: 
+		<p>  <p/>
+		<%= pic.emotion %></h4>
+		<p />
+		<br />
+		<br />
+		<h4>What I Learned:</h4>
+		<p>
+		 <%= pic.learned %></h4>
+		<p />
+		
+		</div>
+	</div>
+		<% end %>
+	<br />
+</dir>
+
+	
