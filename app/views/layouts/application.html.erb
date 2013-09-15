@@ -38,6 +38,24 @@
 			    	</li>
 			    	
 		    		<%= link_to 'New Pic', new_pic_path, :class => 'btn btn-success btn-small' %>
+
+		    		
+
+		    		<% if current_user.blank? %>
+		    		<li>
+            		<%= link_to 'Sign In', new_user_session_path %>
+            		</li>
+
+            		<li>
+            		<%= link_to 'Sign Up', new_user_session_path %>
+            		</li>
+
+           			<% else %>
+           			<li>
+            		<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+            		</li>
+
+           			<% end %>
 		    		
 			    </ul>
 
